@@ -1,4 +1,5 @@
 const express = require('express')
+const db = require('../todo_list/config/mongoose')
 const app = express()
 const port = 3000
 
