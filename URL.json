@@ -1,0 +1,22 @@
+[
+  {
+    "url": "https://www.google.com",
+    "shortenUrl": "aaaaa"
+  },
+  {
+    "url": "https://www.facebook.com",
+    "shortenUrl": "bbbbb"
+  },
+  {
+    "url": "https://www.youtube.com",
+    "shortenUrl": "ccccc"
+  },
+  {
+    "url": "https://www.github.com",
+    "shortenUrl": "ddddd"
+  },
+  {
+    "url": "https://tw.alphacamp.co",
+    "shortenUrl": "eeeee"
+  },
+]
