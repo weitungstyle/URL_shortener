@@ -1,6 +1,6 @@
 
 function sample(array) {
-  const index = Math.floor(math.random() * array.length)
+  const index = Math.floor(Math.random() * array.length)
   return array[index]
 }
 
@@ -11,7 +11,7 @@ function generateUrl() {
   const numbers = '1234567890'
 
   let collection = []
-  collection.concat(lowerCaseLetters.split(''), upperCaseLetters.split(''), numbers.split(''))
+  collection = collection.concat(lowerCaseLetters.split(''), upperCaseLetters.split(''), numbers.split(''))
 
   let newUrl = ''
   for (i = 0; i < 5; i++) {
