@@ -1,6 +1,6 @@
 const express = require('express')
 const exphbs = require('express-handlebars')
-const bodyParser = require('body-Parser')
+const bodyParser = require('body-parser')
 const urlPair = require('./models/url')
 const generateUrl = require('./generate_url')
 const app = express()
