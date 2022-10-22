@@ -4,7 +4,7 @@ const bodyParser = require('body-parser')
 const urlPair = require('./models/url')
 const generateUrl = require('./generate_url')
 const app = express()
-const port = process.env.port || 3000
+const port = process.env.PORT || 3000
 
 app.engine('hbs', exphbs.engine({ defaultLatout: 'main', extname: '.hbs' }))
 app.set('view engine', 'hbs')
