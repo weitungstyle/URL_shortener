@@ -3,6 +3,7 @@ const exphbs = require('express-handlebars')
 const bodyParser = require('body-parser')
 const urlPair = require('./models/url')
 const generateUrl = require('./generate_url')
+const url = require('./models/url')
 const app = express()
 const port = process.env.PORT || 3000
 
@@ -27,7 +28,8 @@ app.post('/', (req, res) => {
       if (searchResult == '') {
         shortenUrl = generateUrl()
         urlPair.create({ url, shortenUrl })
-        res.render('index', { shortenUrl })
+          .then(res.render('index', { shortenUrl }))
+          .catch(error => console.log(error))
       }
       else {
         shortenUrl = searchResult[0].shortenUrl
@@ -35,6 +37,13 @@ app.post('/', (req, res) => {
       }
     })
     .catch(error => console.log(error))
+})
+
+app.get('/:id', (req, res) => {
+  const url = req.params.id
+  urlPair.find({ shortenUrl: url })
+    .lean()
+    .then(searchResult => res.redirect(`${searchResult[0].url}`))
 })
 
 app.listen(port, () => {
